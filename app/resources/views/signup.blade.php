@@ -16,20 +16,43 @@
         rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
         crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <style>
     body {
         font-family: 'Nunito', sans-serif;
     }
+
+    .fa-backward {
+        z-index: 51;
+        font-size: 3rem;
+        position: absolute;
+        top: 3rem;
+        left: 5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .fa-backward:hover {
+        opacity: 0.7;
+    }
     </style>
+    <script>
+    const goBack = () => {
+        window.location.href = '/'
+    }
+    </script>
 </head>
 
 <body class="antialiased">
     <section class="vh-100 bg-image"
         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+        <i onclick="goBack()" class="fa-solid fa-backward"></i>
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
             <div class="container h-100">
                 <div
                     class="row d-flex justify-content-center align-items-center h-100">
+
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card" style="border-radius: 1rem">
                             <div class="card-body p-5"

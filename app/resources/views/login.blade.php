@@ -16,16 +16,41 @@
         rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
         crossorigin="anonymous">
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <style>
     body {
         font-family: 'Nunito', sans-serif;
     }
+
+    .fa-backward {
+        z-index: 51;
+        font-size: 3rem;
+        position: absolute;
+        top: 3rem;
+        left: 5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .fa-backward:hover {
+        opacity: 0.7;
+    }
     </style>
+    <script>
+    const goBack = () => {
+        window.location.href = '/'
+    }
+    </script>
 </head>
 
 <body class="antialiased">
     <section class="vh-100 gradient-custom"
         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+        <i onclick="goBack()" class="fa-solid fa-backward"></i>
+
         <div class="container py-5 h-100">
             <div
                 class="row d-flex justify-content-center align-items-center h-100">
@@ -59,7 +84,7 @@
                                 </div>
 
                                 <p class="small mb-5 pb-lg-2"><a
-                                        class="text-white-50" href="#!">Forgot
+                                        class="text-primary" href="#!">Forgot
                                         password?</a></p>
 
                                 <button
@@ -81,7 +106,7 @@
                             <div>
                                 <p class="mb-0">Don't have an account? <a
                                         href="/signup"
-                                        class="text-white-50 fw-bold">Sign
+                                        class="text-primary fw-bold">Sign
                                         Up</a>
                                 </p>
                             </div>
